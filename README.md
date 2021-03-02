@@ -24,4 +24,4 @@ nativefier -n ProtonMail -a x64 --tray --single-instance --internal-urls "(http(
 ```
 
 # License
-[MIT](LICENSE.md)
+[MIT](LICENSE)
