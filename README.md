@@ -24,4 +24,4 @@ nativefier -n ProtonMail -a x64 --tray --single-instance --internal-urls "(http(
 ```
 
 # License
-You will find a MIT License in the repo.
+[MIT](LICENSE.md)
