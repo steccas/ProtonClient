@@ -1,5 +1,5 @@
 # ProtonClient
-A small client for ProtonMail done with electron plugins.
+A small unofficial client for ProtonMail done with electron plugins.
 I just did it because I didn't want to open the browser anytime I wanted to check my protonmail and I don't like to use Proton Bridge.
 
 # About the app
