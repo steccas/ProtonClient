@@ -12,7 +12,7 @@ regarding any other security concern protonmail is one of the most trusted and s
 furthermore this client is just like having ProtonMail in a Chrome window.
 
 # Build
-To build this client you need to have setup and install nativefier.
+To build this client you need to setup and install nativefier.
 Please refer to [nativefier documentation](https://www.npmjs.com/package/nativefier) for further informations.
 
 You can build it from Windows, Linux or Mac. But you will need wine or Windows to build it for Windows.
