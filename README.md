@@ -19,7 +19,9 @@ You can build it from Windows, Linux or Mac. But you will need wine or Windows t
 
 When everything is setup run from powershell:
 
-'nativefier -n ProtonMail -a x64 --tray --single-instance --internal-urls "(http(s)?:\/\/.)?(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)?(protonmail.com)" -i "C:\Users\lucas\Desktop\icon.ico" beta.protonmail.com'
+```bash
+nativefier -n ProtonMail -a x64 --tray --single-instance --internal-urls "(http(s)?:\/\/.)?(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)?(protonmail.com)" -i "C:\Users\lucas\Desktop\icon.ico" beta.protonmail.com
+```
 
 # License
 You will find a MIT License in the repo.
