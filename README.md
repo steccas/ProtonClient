@@ -23,6 +23,8 @@ Furhermore the Swiss Laws protects your data from anyone who will want to access
 
 Most importantly, they don't use ads, so they aren't selling your data. They simply make money with their convenient paid plans, don't worry there is also a free plan for starters.
 
+Recently they creadet a VPN service (ProtonVPN) wich may be even more when useful paired with a secure mail provider.
+
 Anyways if you need further informations or you just need to subscribe (in fact you need to subscribe to use this client lol) go [here](https://go.getproton.me/SHJF).
 
 ## Security notice about this client
