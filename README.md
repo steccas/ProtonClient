@@ -6,6 +6,8 @@
 A small unofficial client for ProtonMail done with electron plugins.
 I just did it because I didn't want to open the browser every time I wanted to check my protonmail and I don't like to use Proton Bridge.
 
+![Visits Badge](https://badges.pufler.dev/visits/Steccas/ProtonClient) ![Created Badge](https://badges.pufler.dev/created/Steccas/ProtonClient) ![Updated Badge](https://badges.pufler.dev/updated/Steccas/ProtonClient)
+
 ## About the app
 The app is currently released for Windows10 64bit but I will make a build for Linux and Mac shortly.
 It will be present in the system tray and will prompt a nofication when you will receive a new mail.
