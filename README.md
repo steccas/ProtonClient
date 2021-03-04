@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://go.getproton.me/SHJF?file_id=968" target="_blank"><img src="https://media.go2speed.org/brand/files/proton/26/PM-728x90.png" width="728" height="90" border="0" /></a><img src="https://go.getproton.me/aff_i?offer_id=26&file_id=968&aff_id=2299&tiny_url=1" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />
+    <a href="https://go.getproton.me/SHJN?file_id=968" target="_blank"><img src="https://media.go2speed.org/brand/files/proton/26/PM-728x90.png" width="728" height="90" border="0" /></a><img src="https://go.getproton.me/aff_i?offer_id=26&file_id=968&aff_id=2299&url_id=267&tiny_url=1" width="0" height="0" style="position:absolute;visibility:hidden;" border="0" />
 </p>
 
 # ProtonClient
@@ -30,7 +30,7 @@ Most importantly, they don't use ads, so they aren't selling your data. They sim
 
 Recently they creadet a VPN service (ProtonVPN) wich may be even more when useful paired with a secure mail provider.
 
-Anyways if you need further informations or you just need to subscribe (in fact you need to subscribe to use this client lol) go [here](https://go.getproton.me/SHJF).
+Anyways if you need further informations or you just need to subscribe (in fact you need to subscribe to use this client lol) go [here](https://go.getproton.me/SHJN).
 
 ## Security notice about this client
 You can verify via the building process and source that I am using the legit protonmail link,
