@@ -10,9 +10,12 @@ I just did it because I didn't want to open the browser every time I wanted to c
 
 ## About the app
 The app is currently released for Windows10 64bit but I will make a build for Linux and Mac shortly.
-It will be present in the system tray and will prompt a nofication when you will receive a new mail.
+
+It will remain opened in the system tray and will prompt a nofication when you will receive a new mail.
 
 From the app you will be able to use ProtonCalendar and ProtonContacts.
+
+Most notably, the account login is persistent between app restart, including OS reboots. Of course if you don't log off before closing it.
 
 ## About protonmail
 What is ProtonMail?
