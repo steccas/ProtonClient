@@ -4,7 +4,7 @@ var nativefier = require('nativefier').default;
 var options = {
   name: 'ProtonClient', // will be inferred if not specified
   targetUrl: 'https://beta.protonmail.com', // required
-  platform: 'linux', // defaults to the current system
+  platform: 'windows', // defaults to the current system
   arch: 'x64', // defaults to the current system
   appVersion: '1.1.0',
   overwrite: true,
@@ -17,7 +17,7 @@ var options = {
   showMenuBar: false,
   fastQuit: false,
   ignoreCertificate: false,
-  disableGpu: true,
+  disableGpu: false,
   ignoreGpuBlacklist: false,
   enableEs3Apis: false,
   internalUrls: '(http(s)?:\/\/.)?(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)?(protonmail.com)', // defaults to URLs on same second-level domain as app
@@ -30,6 +30,13 @@ var options = {
   tray: true,
   fileDownloadOptions: {
     saveAs: true, // always show "Save As" dialog
+  },
+  win32metadata: {
+    CompanyName: 'Luca Steccanella',
+    FileDescription: 'Unofficial Proton Client done with nativefier',
+    OriginalFilename: 'ProtonClient',
+    ProductName: 'Proton Client',
+    InternalName: 'Luca Steccanella'
   },
 };
 

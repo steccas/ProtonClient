@@ -19,7 +19,7 @@ function buildLinux {
 }
 
 function buildMac {
-    node ./proton_client_Mac.js
+    node ./proton_client_mac.js
 }
 
 function buildAll {
