@@ -45,7 +45,8 @@ You can build it from Windows, Linux or Mac. But you will need wine or Windows t
 
 ### Windows
 When everything is setup run from powershell:
-```node .\proton_client_win.js
+```
+    node .\proton_client_win.js
 ```
 and then you will have the build folder ready to use.
 
@@ -59,7 +60,6 @@ or
 ### Linux
 For Linux I created a small bash script to make the build faster.
 jsut run [build.sh](build.sh) from your shell giving as an argument:
-
 ```--win
 ```
 
