@@ -38,16 +38,31 @@ regarding any other security concern protonmail is one of the most trusted and s
 furthermore this client is just like having ProtonMail in a Chrome window. This means that you are not going to store any data on your PC.
 
 ## Build
-To build this client you need to setup and install nativefier.
+To build this client you need to setup and install node and nativefier.
 Please refer to [nativefier documentation](https://www.npmjs.com/package/nativefier) for further informations.
 
 You can build it from Windows, Linux or Mac. But you will need wine or Windows to build it for Windows.
 
+### Windows
 When everything is setup run from powershell:
-
-```bash
-nativefier -n ProtonMail -a x64 --tray --single-instance --internal-urls "(http(s)?:\/\/.)?(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)?(protonmail.com)" beta.protonmail.com
+```node .\proton_client_win.js
 ```
+and then you will have the build folder ready to use.
+
+You can also build for linux or mac using:
+```node .\proton_client_linux.js
+```
+or
+```node .\proton_client_mac.js
+```
+
+### Linux
+For Linux I created a small bash script to make the build faster.
+jsut run [build.sh](build.sh) from your shell giving as an argument:
+
+```--win
+```
+
 
 ## License
 [MIT](LICENSE)
