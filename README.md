@@ -9,13 +9,17 @@ I just did it because I didn't want to open the browser every time I wanted to c
 ![Visits Badge](https://badges.pufler.dev/visits/Steccas/ProtonClient) ![Created Badge](https://badges.pufler.dev/created/Steccas/ProtonClient) ![Updated Badge](https://badges.pufler.dev/updated/Steccas/ProtonClient)
 
 ## About the app
-The app is currently released for Windows10 64bit but I will make a build for Linux and Mac shortly.
+The app is currently released for Windows, Linux and Mac 64bit.
+Unfortunately I can't test the Mac version, so feel free to notify any problems.
+Deb and rpm packages are upcoming.
 
-It will remain opened in the system tray and will prompt a nofication when you will receive a new mail.
+The app will remain opened in the system tray and will prompt a nofication when you will receive a new mail.
 
 From the app you will be able to use ProtonCalendar and ProtonContacts.
 
 Most notably, the account login is persistent between app restart, including OS reboots. Of course if you don't log off before closing it.
+
+The client, unlike when using the bridge and so SMTP client, will not work with the mail locally; this means that it is like using Proton Mail from the browser.
 
 ## About protonmail
 What is ProtonMail?
@@ -46,23 +50,41 @@ You can build it from Windows, Linux or Mac. But you will need wine or Windows t
 ### Windows
 When everything is setup run from powershell:
 ```
-    node .\proton_client_win.js
+node .\proton_client_win.js
 ```
 and then you will have the build folder ready to use.
 
 You can also build for linux or mac using:
-```node .\proton_client_linux.js
+```
+node .\proton_client_linux.js
 ```
 or
-```node .\proton_client_mac.js
+```
+node .\proton_client_mac.js
 ```
 
 ### Linux
 For Linux I created a small bash script to make the build faster.
 jsut run [build.sh](build.sh) from your shell giving as an argument:
-```--win
 ```
+--win
+```
+To buld for Windows
+```
+--linux
+```
+To buld for linux
+```
+--mac
+```
+To buld for Mac
+```
+--all
+```
+To build for all the platform.
 
+### Mac
+I don't own a Mac, but using node via terminal you should be able tu build exactly like in Windows or Linux.
 
 ## License
 [MIT](LICENSE)
