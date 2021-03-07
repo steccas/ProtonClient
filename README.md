@@ -6,7 +6,9 @@
 An unofficial desktop client for ProtonMail done with electron nativefier.
 I just did it because I didn't want to open the browser every time I wanted to check my protonmail, I don't like to use Proton Bridge which is buggy and I prefer to access protonmail without intermediary software while keeping desktop notifications and a dedicated app.
 
-![Visits Badge](https://badges.pufler.dev/visits/Steccas/ProtonClient) ![Created Badge](https://badges.pufler.dev/created/Steccas/ProtonClient) ![Updated Badge](https://badges.pufler.dev/updated/Steccas/ProtonClient) ![GitHub repo size](https://img.shields.io/github/repo-size/Steccas/ProtonClient?style=plastic) ![GitHub language count](https://img.shields.io/github/languages/count/Steccas/ProtonClient?style=plastic) ![GitHub top language](https://img.shields.io/github/languages/top/Steccas/ProtonClient?style=plastic) ![GitHub last commit](https://img.shields.io/github/last-commit/Steccas/ProtonClient?color=red&style=plastic)
+![Visits Badge](https://badges.pufler.dev/visits/Steccas/ProtonClient) ![Created Badge](https://badges.pufler.dev/created/Steccas/ProtonClient) ![Updated Badge](https://badges.pufler.dev/updated/Steccas/ProtonClient) 
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Steccas/ProtonClient?style=plastic) ![GitHub language count](https://img.shields.io/github/languages/count/Steccas/ProtonClient?style=plastic) ![GitHub top language](https://img.shields.io/github/languages/top/Steccas/ProtonClient?style=plastic) ![GitHub last commit](https://img.shields.io/github/last-commit/Steccas/ProtonClient?color=red&style=plastic)
 
 ## About the app
 The app is currently released for Windows, Linux and Mac 64bit.
