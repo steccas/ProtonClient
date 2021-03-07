@@ -1,0 +1,42 @@
+{
+	"name": "hasbin",
+	"version": "1.2.3",
+
+	"description": "Check whether a binary exists in the PATH environment variable",
+	"keywords": [ "bin", "check", "path" ],
+
+	"author": "Nature Publishing Group",
+	"contributors": [
+		"Rowan Manning (http://rowanmanning.com/)",
+		"Andrew Walker (http://www.moddular.org/)"
+	],
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/springernature/hasbin.git"
+	},
+	"homepage": "https://github.com/springernature/hasbin",
+	"bugs": "https://github.com/springernature/hasbin/issues",
+	"license": "MIT",
+
+	"engines": {
+		"node": ">=0.10"
+	},
+	"dependencies": {
+		"async": "~1.5"
+	},
+	"devDependencies": {
+		"istanbul": "~0.3",
+		"jscs": "^2",
+		"jshint": "^2",
+		"mocha": "^2",
+		"mockery": "~1.4",
+		"proclaim": "^3",
+		"sinon": "^1"
+	},
+
+	"main": "./lib/hasbin.js",
+	"scripts": {
+		"test": "make ci"
+	}
+}
