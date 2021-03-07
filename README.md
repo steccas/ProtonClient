@@ -3,8 +3,8 @@
 </p>
 
 # ProtonClient
-A small unofficial client for ProtonMail done with electron plugins.
-I just did it because I didn't want to open the browser every time I wanted to check my protonmail and I don't like to use Proton Bridge.
+An unofficial desktop client for ProtonMail done with electron nativefier.
+I just did it because I didn't want to open the browser every time I wanted to check my protonmail, I don't like to use Proton Bridge which is buggy and I prefer to access protonmail without intermediary software while keeping desktop notifications and a dedicated app.
 
 ![Visits Badge](https://badges.pufler.dev/visits/Steccas/ProtonClient) ![Created Badge](https://badges.pufler.dev/created/Steccas/ProtonClient) ![Updated Badge](https://badges.pufler.dev/updated/Steccas/ProtonClient)
 
