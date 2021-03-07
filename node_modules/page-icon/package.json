@@ -1,0 +1,32 @@
+{
+  "name": "page-icon",
+  "version": "0.4.0",
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "description": "Find the best icon for a web page",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Goh Jia Hao",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "file-type": "^16.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nativefier/page-icon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nativefier/page-icon/issues"
+  },
+  "homepage": "https://github.com/nativefier/page-icon#readme"
+}

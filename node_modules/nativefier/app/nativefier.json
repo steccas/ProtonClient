@@ -1,0 +1,8 @@
+{
+  "name": "Google",
+  "targetUrl": "http://google.com",
+  "badge": false,
+  "width": 1280,
+  "height": 800,
+  "showMenuBar": false
+}
