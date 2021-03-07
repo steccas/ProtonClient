@@ -10,8 +10,6 @@ I just did it because I didn't want to open the browser every time I wanted to c
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Steccas/ProtonClient?style=plastic) ![GitHub language count](https://img.shields.io/github/languages/count/Steccas/ProtonClient?style=plastic) ![GitHub top language](https://img.shields.io/github/languages/top/Steccas/ProtonClient?style=plastic) ![GitHub last commit](https://img.shields.io/github/last-commit/Steccas/ProtonClient?color=red&style=plastic)
 
-![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FSteccas%2FProtonClient%2F)
-
 ## About the app
 The app is currently released for Windows, Linux and Mac 64bit.
 Unfortunately I can't test the Mac version, so feel free to notify any problems.
