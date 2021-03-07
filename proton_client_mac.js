@@ -4,7 +4,7 @@ var nativefier = require('nativefier').default;
 var options = {
   name: 'ProtonClient', // will be inferred if not specified
   targetUrl: 'https://beta.protonmail.com', // required
-  platform: 'linux', // defaults to the current system
+  platform: 'mac', // defaults to the current system
   arch: 'x64', // defaults to the current system
   appVersion: '1.1.0',
   overwrite: true,
@@ -22,6 +22,7 @@ var options = {
   enableEs3Apis: false,
   internalUrls: '(http(s)?:\/\/.)?(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)?(protonmail.com)', // defaults to URLs on same second-level domain as app
   blockExternalUrls: false,
+  darwinDarkModeSupport: true,
   insecure: false,
   honest: false,
   zoom: 1.0,
