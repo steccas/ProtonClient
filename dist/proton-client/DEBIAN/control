@@ -1,0 +1,8 @@
+Package: proton-client
+Version: 1.1.1
+License: MIT
+Vendor: Luca Steccanella <steccas@pm.me>
+Architecture: amd64
+Maintainer: Luca Steccanella <steccas@pm.me>
+Homepage: https://github.com/Steccas/ProtonClient
+Description: Unofficial Protonmail client from Luca Steccanella
