@@ -17,7 +17,7 @@ var options = {
   showMenuBar: false,
   fastQuit: false,
   ignoreCertificate: false,
-  disableGpu: true,
+  disableGpu: false,
   ignoreGpuBlacklist: false,
   enableEs3Apis: false,
   internalUrls: '(http(s)?:\/\/.)?(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)?(protonmail.com)', // defaults to URLs on same second-level domain as app

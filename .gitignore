@@ -1,6 +1,6 @@
 ProtonClient-*/
-proton-Client*/
+dist/proton-client/opt/proton-client/
 *tar.gz
-debscript
 *.7z
 *.zip
+*.deb
