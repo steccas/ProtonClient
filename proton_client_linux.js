@@ -6,7 +6,7 @@ var options = {
   targetUrl: 'https://beta.protonmail.com', // required
   platform: 'linux', // defaults to the current system
   arch: 'x64', // defaults to the current system
-  appVersion: '1.1.0',
+  appVersion: '1.1.1',
   overwrite: true,
   asar: false, // see conceal
   icon: './icons/icon.ico',
