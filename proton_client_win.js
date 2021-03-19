@@ -33,7 +33,7 @@ var options = { //nativefier -n ProtonMail -a x64 --tray --single-instance --int
   },
   win32metadata: {
     CompanyName: 'Luca Steccanella',
-    FileDescription: 'Unofficial Proton Client done with nativefier',
+    FileDescription: 'Proton Client',
     OriginalFilename: 'ProtonClient',
     ProductName: 'Proton Client',
     InternalName: 'Luca Steccanella'
