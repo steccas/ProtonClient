@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Proton Client
-Exec=/opt/proton-client/proton-client %U
-Terminal=false
-Type=Application
-Icon=proton-client
-StartupWMClass=proton-client
-Comment=Unofficial Protonmail client from Luca Steccanella.
-Categories=email;

@@ -9,7 +9,7 @@ var options = {
   appVersion: '1.1.1',
   overwrite: true,
   asar: false, // see conceal
-  icon: './icons/icon.ico',
+  icon: './icons/icon.png',
   counter: true,
   bounce: true,
   width: 1280,
