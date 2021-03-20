@@ -5,3 +5,4 @@ dist/proton-client/opt/proton-client/
 *.7z
 *.zip
 *.deb
+*.rpm
