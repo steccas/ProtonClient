@@ -1,6 +1,6 @@
-ProtonClient-*/
-proton-client-*/
+dist/pack/
 dist/linux/proton-client/opt/proton-client/
+ProtonClient-cache*/
 *tar.gz
 *.7z
 *.zip
