@@ -28,7 +28,7 @@ var options = {
   zoom: 1.0,
   singleInstance: true,
   clearCache: false,
-  tray: true,
+  tray: false,
   fileDownloadOptions: {
     saveAs: true, // always show "Save As" dialog
   },
