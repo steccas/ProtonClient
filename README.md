@@ -20,6 +20,7 @@ Most notably, the account login is persistent between app restart, including OS 
 
 The client, unlike when using the bridge and so SMTP client, will not work with the mail locally; this means that it is like using Proton Mail from the browser.
 
+![screenshot](https://github.com/Steccas/ProtonClient/blob/main/screens/screenshot.jpg)
 
 ## About protonmail
 What is ProtonMail?
