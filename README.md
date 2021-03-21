@@ -11,7 +11,6 @@ I just did it because I didn't want to open the browser every time I wanted to c
 ## About the app
 The app is currently released for Windows, Linux and Mac 64bit.
 Unfortunately I can't test the Mac version, so feel free to notify any problems.
-Deb and rpm packages are upcoming.
 
 The app will remain opened in the system tray and will prompt a nofication when you will receive a new mail.
 
@@ -20,6 +19,8 @@ From the app you will be able to use ProtonCalendar and ProtonContacts.
 Most notably, the account login is persistent between app restart, including OS reboots. Of course if you don't log off before closing it.
 
 The client, unlike when using the bridge and so SMTP client, will not work with the mail locally; this means that it is like using Proton Mail from the browser.
+
+![screenshot](https://github.com/Steccas/ProtonClient/blob/main/screens/screenshot.jpg)
 
 ## About protonmail
 What is ProtonMail?
@@ -40,6 +41,7 @@ Anyways if you need further informations or you just need to subscribe (in fact 
 You can verify via the building process and source that I am using the legit protonmail link,
 regarding any other security concern protonmail is one of the most trusted and secure mail providers;
 furthermore this client is just like having ProtonMail in a Chrome window. This means that you are not going to store any data on your PC.
+Unlike many others unofficial clients it doesn't ask for your 2FA secrets which shouldn't be never gave away.
 
 ## Build
 To build this client you need to setup and install node and nativefier.
