@@ -51,7 +51,8 @@ Anyways if you need further informations or you just need to subscribe (in fact 
 ## Security notice about this client
 You can verify via the building process and source that I am using the legit protonmail link,
 regarding any other security concern protonmail is one of the most trusted and secure mail providers;
-furthermore this client is just like having ProtonMail in a Chrome window. This means that you are not going to store any data on your PC.
+furthermore this client is just like having ProtonMail in a Chrome window. This means that you are not going to store any mail on your PC.
+Like in browser, you're gonna storage your login cookies anyways that's why I always recommend to encrypt your disk because every software will leave some traces!
 Unlike many others unofficial clients it doesn't ask for your 2FA secrets which shouldn't be never gave away.
 
 ## Build
