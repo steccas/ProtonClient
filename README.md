@@ -10,6 +10,15 @@ Go [here](https://go.getproton.me/SHJN) for further informations about ProtonMai
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Steccas/ProtonClient?style=plastic) ![GitHub language count](https://img.shields.io/github/languages/count/Steccas/ProtonClient?style=plastic) ![GitHub top language](https://img.shields.io/github/languages/top/Steccas/ProtonClient?style=plastic) ![GitHub last commit](https://img.shields.io/github/last-commit/Steccas/ProtonClient?color=red&style=plastic)
 
+## Community and support
+It is a very newborn and basic project but it can grow and get way better, if you want to help please leave a star 🌟 and share it with your friends.
+You can also start contributing now! If you wish to do so please feel free to fork the project and propose modifications that we can merge togheter.
+The more we are the better!
+
+A coffee is always a gesture of LOVE ❤️
+
+<a href="https://www.buymeacoffee.com/steccas" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 ## About the app
 The app is currently released for Windows, Linux and Mac 64bit.
 Unfortunately I can't test the Mac version, so feel free to notify any problems.
