@@ -6,3 +6,4 @@ ProtonClient-cache*/
 *.zip
 *.deb
 *.rpm
+*.msi
