@@ -8,3 +8,4 @@ ProtonClient-cache*/
 *.rpm
 *.msi
 ProtonClient-*
+.DS_Store
