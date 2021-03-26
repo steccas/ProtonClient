@@ -6,7 +6,7 @@ var options = {
   targetUrl: 'https://beta.protonmail.com', // required
   platform: 'mac', // defaults to the current system
   arch: 'x64', // defaults to the current system
-  appVersion: '1.1.1',
+  appVersion: '1.1.2',
   overwrite: true,
   asar: false, // see conceal
   icon: './icons/icon.icns',
@@ -32,6 +32,8 @@ var options = {
   fileDownloadOptions: {
     saveAs: true, // always show "Save As" dialog
   },
+  titleBarStyle: 'hiddenInset',
+  inject: ['./css/macInsetTrafficLights.css']
 };
 
 nativefier(options, function (error, appPath) {

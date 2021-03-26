@@ -1,0 +1,25 @@
+/* header is draggable... */
+header {
+  -webkit-app-region: drag;
+}
+
+/* but any buttons inside the header shouldn't be draggable */
+header button,
+header a,
+header form {
+  -webkit-app-region: no-drag;
+}
+
+.logo-container {
+  padding-top: 10px;
+}
+
+.logo-container > button {
+  display: none;
+}
+
+.logo-container > .logo-link {
+  padding-left: 0px;
+  margin-left: -3px;
+  padding-bottom: 0;
+}
