@@ -85,3 +85,5 @@ ProtonClient-cache*/
 *.deb
 *.rpm
 *.msi
+ProtonClient-*
+.DS_Store
