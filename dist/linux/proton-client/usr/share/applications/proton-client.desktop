@@ -6,4 +6,6 @@ Type=Application
 Icon=proton-client
 StartupWMClass=proton-client
 Comment=Unofficial Protonmail client from Luca Steccanella.
-Categories=email;
+Categories=Network;Email;
+MimeType=message/rfc822;x-scheme-handler/mailto;application/x-xpinstall;
+StartupNotify=true
