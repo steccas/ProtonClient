@@ -86,4 +86,5 @@ ProtonClient-cache*/
 *.rpm
 *.msi
 ProtonClient-*
+proton-client-linux-x64
 .DS_Store
