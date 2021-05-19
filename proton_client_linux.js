@@ -6,14 +6,14 @@ var options = {
   targetUrl: 'https://beta.protonmail.com', // required
   platform: 'linux', // defaults to the current system
   arch: 'x64', // defaults to the current system
-  appVersion: '1.1.1',
+  appVersion: '1.2.0',
   overwrite: true,
   asar: false, // see conceal
   icon: './icons/icon.png',
   counter: true,
   bounce: true,
-  width: 1280,
-  height: 800,
+  width: 1440,
+  height: 900,
   showMenuBar: false,
   fastQuit: false,
   ignoreCertificate: false,
