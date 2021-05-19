@@ -85,6 +85,10 @@ ProtonClient-cache*/
 *.deb
 *.rpm
 *.msi
+*.zst
 ProtonClient-*
 proton-client-linux-x64
 .DS_Store
+dist/linux/.INSTALL
+dist/linux/.MTREE
+dist/linux/.PKGINFO
