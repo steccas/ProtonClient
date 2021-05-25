@@ -55,6 +55,9 @@ furthermore this client is just like having ProtonMail in a Chrome window. This 
 Like in browser, you're gonna storage your login cookies anyways that's why I always recommend to encrypt your disk because every software will leave some traces!
 Unlike many others unofficial clients it doesn't ask for your 2FA secrets which shouldn't be never gave away.
 
+## Install
+Please head to the [release section](https://github.com/Steccas/ProtonClient/releases) to find ready to use installers for Windows, Linux distros and Mac.
+
 ## Build
 To build this client you need to setup and install node and nativefier.
 Please refer to [nativefier documentation](https://www.npmjs.com/package/nativefier) for further informations.
