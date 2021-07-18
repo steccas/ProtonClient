@@ -59,19 +59,21 @@ Unlike many others unofficial clients it doesn't ask for your 2FA secrets which 
 Please head to the [release section](https://github.com/Steccas/ProtonClient/releases) to find ready to use installers for Windows, Linux distros and Mac.
 
 ## Build
-To build this client you need to setup and install node and nativefier.
-Please refer to [nativefier documentation](https://www.npmjs.com/package/nativefier) for further informations.
+To build this client you need to set up and install [Node.js] and [nativefier]. Once Node.js is installed, simply run the `npm install` command in the repository's root folder to install nativefier. Once that's done, you will be able to run the build scripts below.
 
-You can build it from Windows, Linux or Mac. But you will need wine or Windows to build it for Windows.
+You can build it from Windows, Linux, or Mac, but you will need wine or Windows to build it for Windows. Please refer to nativefier's documentation for more information.
+
+[Node.js]: https://nodejs.org/
+[nativefier]: https://www.npmjs.com/package/nativefier
 
 ### Windows
-When everything is setup run from powershell:
+When everything has been set up, run from PowerShell:
 ```
 node .\proton_client_win.js
 ```
-and then you will have the build folder ready to use.
+Once it finishes, you will have a build folder ready to use.
 
-You can also build for linux or mac using:
+You can also build for Linux or Mac using:
 ```
 node .\proton_client_linux.js
 ```
@@ -81,8 +83,8 @@ node .\proton_client_mac.js
 ```
 
 ### Linux
-For Linux I created a small bash script to make the build faster.
-jsut run [build.sh](build.sh) from your shell giving as an argument:
+I created a small bash script for Linux to make the build faster.
+Just run [build.sh](build.sh) from your shell with one of these arguments:
 ```
 --win
 ```
