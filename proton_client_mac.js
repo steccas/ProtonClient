@@ -3,7 +3,7 @@ var nativefier = require('nativefier').default;
 // possible options, defaults unless specified otherwise
 var options = {
   name: 'ProtonClient', // will be inferred if not specified
-  targetUrl: 'https://beta.protonmail.com', // required
+  targetUrl: 'https://mail.protonmail.com', // required
   platform: 'mac', // defaults to the current system
   arch: 'x64', // defaults to the current system
   appVersion: '1.2.0',

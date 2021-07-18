@@ -3,10 +3,10 @@ var nativefier = require('nativefier').default;
 // possible options, defaults unless specified otherwise
 var options = { //nativefier -n ProtonMail -a x64 --tray --single-instance --internal-urls "(http(s)?:\/\/.)?(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)?(protonmail.com)" beta.protonmail.com
   name: 'ProtonClient', // will be inferred if not specified
-  targetUrl: 'https://beta.protonmail.com', // required
+  targetUrl: 'https://mail.protonmail.com', // required
   platform: 'windows', // defaults to the current system
   arch: 'x64', // defaults to the current system
-  appVersion: '1.2.0',
+  appVersion: '1.2.1',
   overwrite: true,
   asar: false, // see conceal
   icon: './icons/icon.ico',
