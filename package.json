@@ -1,9 +1,14 @@
 {
   "name": "proton-client",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "dependencies": {
-    "nativefier": "^42.4.0"
+    "nativefier": "latest"
   },
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "funding":
+    {
+      "type" : "GitHubSponsor",
+      "url" : "https://github.com/Steccas/ProtonClient?sponsor=1"
+    }
 }
