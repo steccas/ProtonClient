@@ -19,6 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.INJECT_DIR = void 0;
 /**
  * Preload file that will be executed in the renderer process.
  * Note: This needs to be attached **prior to imports**, as imports
@@ -30,7 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const electron_1 = require("electron");
-const INJECT_JS_PATH = path.join(__dirname, '..', 'inject/inject.js');
+// Do *NOT* add 3rd-party imports here in preload (except for webpack `externals` like electron).
+// They will work during development, but break in the prod build :-/ .
+// Electron doc isn't explicit about that, so maybe *we*'re doing something wrong.
+// At any rate, that's what we have now. If you want an import here, go ahead, but
+// verify that apps built with a non-devbuild nativefier (installed from tarball) work.
+// Recipe to monkey around this, assuming you git-cloned nativefier in /opt/nativefier/ :
+// cd /opt/nativefier/ && rm -f nativefier-43.1.0.tgz && npm run build && npm pack && mkdir -p ~/n4310/ && cd ~/n4310/ \
+//    && rm -rf ./* && npm i /opt/nativefier/nativefier-43.1.0.tgz && ./node_modules/.bin/nativefier 'google.com'
+// See https://github.com/nativefier/nativefier/issues/1175
+// and https://www.electronjs.org/docs/api/browser-window#new-browserwindowoptions / preload
+const log = console; // since we can't have `loglevel` here in preload
+exports.INJECT_DIR = path.join(__dirname, '..', 'inject');
 /**
  * Patches window.Notification to:
  * - set a callback on a new Notification
@@ -50,16 +62,28 @@ function setNotificationCallback(createCallback, clickCallback) {
     Object.defineProperty(newNotify, 'permission', {
         get: () => OldNotify.permission,
     });
-    // @ts-ignore
+    // @ts-expect-error TypeScript says its not compatible, but it works?
     window.Notification = newNotify;
 }
 function injectScripts() {
-    const needToInject = fs.existsSync(INJECT_JS_PATH);
+    const needToInject = fs.existsSync(exports.INJECT_DIR);
     if (!needToInject) {
         return;
     }
     // Dynamically require scripts
-    require(INJECT_JS_PATH);
+    try {
+        const jsFiles = fs
+            .readdirSync(exports.INJECT_DIR, { withFileTypes: true })
+            .filter((injectFile) => injectFile.isFile() && injectFile.name.endsWith('.js'))
+            .map((jsFileStat) => path.join('..', 'inject', jsFileStat.name));
+        for (const jsFile of jsFiles) {
+            log.debug('Injecting JS file', jsFile);
+            require(jsFile);
+        }
+    }
+    catch (err) {
+        log.error('Error encoutered injecting JS files', err);
+    }
 }
 function notifyNotificationCreate(title, opt) {
     electron_1.ipcRenderer.send('notification', title, opt);
@@ -67,12 +91,14 @@ function notifyNotificationCreate(title, opt) {
 function notifyNotificationClick() {
     electron_1.ipcRenderer.send('notification-click');
 }
+// @ts-expect-error TypeScript thinks these are incompatible but they aren't
 setNotificationCallback(notifyNotificationCreate, notifyNotificationClick);
 electron_1.ipcRenderer.on('params', (event, message) => {
+    log.debug('ipcRenderer.params', { event, message });
     const appArgs = JSON.parse(message);
-    console.info('nativefier.json', appArgs);
+    log.info('nativefier.json', appArgs);
 });
 electron_1.ipcRenderer.on('debug', (event, message) => {
-    console.info('debug:', message);
+    log.debug('ipcRenderer.debug', { event, message });
 });
 //# sourceMappingURL=preload.js.map
