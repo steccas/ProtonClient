@@ -6,7 +6,7 @@ var options = {
   targetUrl: 'https://mail.protonmail.com', // required
   platform: 'mac', // defaults to the current system
   arch: 'x64', // defaults to the current system
-  appVersion: '1.2.1',
+  appVersion: '1.2.2',
   overwrite: true,
   asar: false, // see conceal
   icon: './icons/icon.icns',
