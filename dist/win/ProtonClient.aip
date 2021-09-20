@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="18.0" version="18.1" Modules="simple" RootPath="." Language="en" Id="{0128D5F2-DCF8-49AD-A664-C465933DD15B}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="18.0" version="18.4" Modules="simple" RootPath="." Language="en" Id="{0128D5F2-DCF8-49AD-A664-C465933DD15B}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="AI_CURRENT_YEAR" Value="2021" ValueLocId="-"/>
@@ -14,10 +14,10 @@
     <ROW Property="ARPURLUPDATEINFO" Value="https://github.com/Steccas/ProtonClient"/>
     <ROW Property="CTRLS" Value="1"/>
     <ROW Property="Manufacturer" Value="Luca Steccanella"/>
-    <ROW Property="ProductCode" Value="1033:{BA7C6470-2192-4463-82A0-4AF4A6AD6083} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{B651FD47-4EBF-4168-9AEC-61327E06470D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="ProtonClient"/>
-    <ROW Property="ProductVersion" Value="1.2.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.2.1" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{C6DE4E0C-ED81-43AE-98FE-3A45B295DCAA}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -35,6 +35,8 @@
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="ProgramMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramMenuFolder" IsPseudoRoot="1"/>
+    <ROW Directory="ProtonClient_Dir" Directory_Parent="ProgramMenuFolder" DefaultDir="PROTON~1|ProtonClient"/>
+    <ROW Directory="StartupFolder" Directory_Parent="TARGETDIR" DefaultDir="STARTU~1|StartupFolder" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
     <ROW Directory="app_Dir" Directory_Parent="resources_Dir" DefaultDir="app"/>
     <ROW Directory="inject_Dir" Directory_Parent="app_Dir" DefaultDir="inject"/>
@@ -47,21 +49,22 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{DC11B24C-C181-47C6-8C92-72AA37B028C9}" Directory_="APPDIR" Attributes="0"/>
     <ROW Component="ProductInformation" ComponentId="{31C200B0-40B9-494B-B83D-2A5054483AE5}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
-    <ROW Component="ProtonClient.exe" ComponentId="{B10E65AC-54FE-4122-8B72-B72B8C9CD063}" Directory_="APPDIR" Attributes="256" KeyPath="ProtonClient.exe"/>
-    <ROW Component="_placeholder" ComponentId="{A04149A6-BC2C-43C5-B228-51B787D19C67}" Directory_="inject_Dir" Attributes="0" KeyPath="_placeholder" Type="0"/>
-    <ROW Component="am.pak" ComponentId="{7A1D05C8-A3FE-4DD4-8385-A00EBE02AB4B}" Directory_="locales_Dir" Attributes="0" KeyPath="am.pak" Type="0"/>
+    <ROW Component="ProtonClient" ComponentId="{F892DE5F-0BDD-4DC1-BEC8-2C96272572C1}" Directory_="ProtonClient_Dir" Attributes="0"/>
+    <ROW Component="ProtonClient.exe" ComponentId="{2532AD50-8ABE-4FEC-B25C-590A9125499C}" Directory_="APPDIR" Attributes="256" KeyPath="ProtonClient.exe"/>
+    <ROW Component="_placeholder" ComponentId="{51ED65E0-470F-42C5-A3BF-5FA8CDE2D80B}" Directory_="inject_Dir" Attributes="0" KeyPath="_placeholder" Type="0"/>
+    <ROW Component="am.pak" ComponentId="{C1CE9AF1-70E0-482C-B3B7-DC922C00D67B}" Directory_="locales_Dir" Attributes="0" KeyPath="am.pak" Type="0"/>
     <ROW Component="chrome_100_percent.pak" ComponentId="{D002033B-E0BD-4984-828A-F0C72F7E9CCC}" Directory_="APPDIR" Attributes="0" KeyPath="README.md" Type="0"/>
-    <ROW Component="d3dcompiler_47.dll" ComponentId="{EB5AAA46-A845-4F41-9DCD-3D31C28499DA}" Directory_="APPDIR" Attributes="256" KeyPath="d3dcompiler_47.dll"/>
-    <ROW Component="ffmpeg.dll" ComponentId="{160D8250-7969-4530-8043-E3BF82E6F743}" Directory_="APPDIR" Attributes="256" KeyPath="ffmpeg.dll"/>
-    <ROW Component="icon.ico" ComponentId="{58417DAA-D1F1-4E06-AE38-F16E5CDFD648}" Directory_="app_Dir" Attributes="0" KeyPath="icon.ico" Type="0"/>
-    <ROW Component="libEGL.dll" ComponentId="{BC9C2FC0-2669-44D5-9CDB-D90E1D0CBB3A}" Directory_="APPDIR" Attributes="256" KeyPath="libEGL.dll"/>
-    <ROW Component="libEGL.dll_1" ComponentId="{C54A260F-6F18-40F8-A6BC-93BB292D71AE}" Directory_="swiftshader_Dir" Attributes="256" KeyPath="libEGL.dll_1"/>
-    <ROW Component="libGLESv2.dll" ComponentId="{A648A66A-4421-4665-BD5D-3C09C41295AB}" Directory_="APPDIR" Attributes="256" KeyPath="libGLESv2.dll"/>
-    <ROW Component="libGLESv2.dll_1" ComponentId="{F48E7D0D-12DC-46CA-A6B1-5182039B7F8C}" Directory_="swiftshader_Dir" Attributes="256" KeyPath="libGLESv2.dll_1"/>
-    <ROW Component="login.css" ComponentId="{DEED3151-941D-4238-8883-3B630E462BFE}" Directory_="static_Dir" Attributes="0" KeyPath="login.css" Type="0"/>
-    <ROW Component="main.js" ComponentId="{1DF6E6EA-17F0-45CA-B2C6-930D770194CE}" Directory_="lib_Dir" Attributes="0" KeyPath="main.js" Type="0"/>
-    <ROW Component="vk_swiftshader.dll" ComponentId="{BF5E5102-FF53-4F16-81D7-9F7AF472DBE7}" Directory_="APPDIR" Attributes="256" KeyPath="vk_swiftshader.dll"/>
-    <ROW Component="vulkan1.dll" ComponentId="{A25DF6A7-39B8-44EC-BD1E-33542EFF07FE}" Directory_="APPDIR" Attributes="256" KeyPath="vulkan1.dll"/>
+    <ROW Component="d3dcompiler_47.dll" ComponentId="{CB7DC984-52FC-46E5-9CDE-E16261664234}" Directory_="APPDIR" Attributes="256" KeyPath="d3dcompiler_47.dll"/>
+    <ROW Component="ffmpeg.dll" ComponentId="{EF381619-E775-45E0-9F8B-11EEFF8D2F70}" Directory_="APPDIR" Attributes="256" KeyPath="ffmpeg.dll"/>
+    <ROW Component="icon.ico" ComponentId="{3801B942-D216-476D-92FA-B3E4BC8D483E}" Directory_="app_Dir" Attributes="0" KeyPath="icon.ico" Type="0"/>
+    <ROW Component="libEGL.dll" ComponentId="{F6FD86BD-D928-495D-B336-E7A37FC0A591}" Directory_="APPDIR" Attributes="256" KeyPath="libEGL.dll"/>
+    <ROW Component="libEGL.dll_1" ComponentId="{2137E191-A185-4641-BE24-B4B2CED8F60A}" Directory_="swiftshader_Dir" Attributes="256" KeyPath="libEGL.dll_1"/>
+    <ROW Component="libGLESv2.dll" ComponentId="{9FD98BD6-8D5E-494D-ABC1-3AAC7392E26F}" Directory_="APPDIR" Attributes="256" KeyPath="libGLESv2.dll"/>
+    <ROW Component="libGLESv2.dll_1" ComponentId="{0568496D-F040-42C0-A8C2-959E88E19C10}" Directory_="swiftshader_Dir" Attributes="256" KeyPath="libGLESv2.dll_1"/>
+    <ROW Component="login.css" ComponentId="{E7AEA63D-96E2-4FAE-A794-4AAE4CD08197}" Directory_="static_Dir" Attributes="0" KeyPath="login.css" Type="0"/>
+    <ROW Component="main.js" ComponentId="{D99EBF97-E44D-46DD-AE64-9E40E0CA0CD3}" Directory_="lib_Dir" Attributes="0" KeyPath="main.js" Type="0"/>
+    <ROW Component="vk_swiftshader.dll" ComponentId="{A8B85DBB-1443-4EA8-949F-7EA09FA02B9F}" Directory_="APPDIR" Attributes="256" KeyPath="vk_swiftshader.dll"/>
+    <ROW Component="vulkan1.dll" ComponentId="{6DE955A3-91C1-46FE-9602-4830CEB96E3B}" Directory_="APPDIR" Attributes="256" KeyPath="vulkan1.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -69,90 +72,90 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="README.md" Component_="chrome_100_percent.pak" FileName="README.txt" Attributes="0" SourcePath="..\..\README.md" SelfReg="false"/>
-    <ROW File="ffmpeg.dll" Component_="ffmpeg.dll" FileName="ffmpeg.dll" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\ffmpeg.dll" SelfReg="false"/>
-    <ROW File="icudtl.dat" Component_="chrome_100_percent.pak" FileName="icudtl.dat" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\icudtl.dat" SelfReg="false"/>
-    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\libEGL.dll" SelfReg="false"/>
-    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\libGLESv2.dll" SelfReg="false"/>
-    <ROW File="LICENSE" Component_="chrome_100_percent.pak" FileName="LICENSE" Attributes="0" SourcePath="..\..\LICENSE" SelfReg="false"/>
-    <ROW File="LICENSES.chromium.html" Component_="chrome_100_percent.pak" FileName="LICENS~1.HTM|LICENSES.chromium.html" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\LICENSES.chromium.html" SelfReg="false"/>
-    <ROW File="ProtonClient.exe" Component_="ProtonClient.exe" FileName="PROTON~1.EXE|ProtonClient.exe" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\ProtonClient.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="resources.pak" Component_="chrome_100_percent.pak" FileName="RESOUR~1.PAK|resources.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources.pak" SelfReg="false"/>
-    <ROW File="snapshot_blob.bin" Component_="chrome_100_percent.pak" FileName="SNAPSH~1.BIN|snapshot_blob.bin" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\snapshot_blob.bin" SelfReg="false"/>
-    <ROW File="v8_context_snapshot.bin" Component_="chrome_100_percent.pak" FileName="V8_CON~1.BIN|v8_context_snapshot.bin" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\v8_context_snapshot.bin" SelfReg="false"/>
-    <ROW File="version" Component_="chrome_100_percent.pak" FileName="version" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\version" SelfReg="false"/>
-    <ROW File="vk_swiftshader.dll" Component_="vk_swiftshader.dll" FileName="VK_SWI~1.DLL|vk_swiftshader.dll" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\vk_swiftshader.dll" SelfReg="false"/>
-    <ROW File="vk_swiftshader_icd.json" Component_="chrome_100_percent.pak" FileName="VK_SWI~1.JSO|vk_swiftshader_icd.json" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\vk_swiftshader_icd.json" SelfReg="false"/>
-    <ROW File="vulkan1.dll" Component_="vulkan1.dll" FileName="vulkan-1.dll" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\vulkan-1.dll" SelfReg="false"/>
-    <ROW File="am.pak" Component_="am.pak" FileName="am.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\am.pak" SelfReg="false"/>
-    <ROW File="ar.pak" Component_="am.pak" FileName="ar.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ar.pak" SelfReg="false"/>
-    <ROW File="bg.pak" Component_="am.pak" FileName="bg.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\bg.pak" SelfReg="false"/>
-    <ROW File="bn.pak" Component_="am.pak" FileName="bn.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\bn.pak" SelfReg="false"/>
-    <ROW File="ca.pak" Component_="am.pak" FileName="ca.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ca.pak" SelfReg="false"/>
-    <ROW File="cs.pak" Component_="am.pak" FileName="cs.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\cs.pak" SelfReg="false"/>
-    <ROW File="da.pak" Component_="am.pak" FileName="da.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\da.pak" SelfReg="false"/>
-    <ROW File="de.pak" Component_="am.pak" FileName="de.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\de.pak" SelfReg="false"/>
-    <ROW File="el.pak" Component_="am.pak" FileName="el.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\el.pak" SelfReg="false"/>
-    <ROW File="enGB.pak" Component_="am.pak" FileName="en-GB.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\en-GB.pak" SelfReg="false"/>
-    <ROW File="enUS.pak" Component_="am.pak" FileName="en-US.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\en-US.pak" SelfReg="false"/>
-    <ROW File="es419.pak" Component_="am.pak" FileName="es-419.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\es-419.pak" SelfReg="false"/>
-    <ROW File="es.pak" Component_="am.pak" FileName="es.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\es.pak" SelfReg="false"/>
-    <ROW File="et.pak" Component_="am.pak" FileName="et.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\et.pak" SelfReg="false"/>
-    <ROW File="fa.pak" Component_="am.pak" FileName="fa.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\fa.pak" SelfReg="false"/>
-    <ROW File="fi.pak" Component_="am.pak" FileName="fi.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\fi.pak" SelfReg="false"/>
-    <ROW File="fil.pak" Component_="am.pak" FileName="fil.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\fil.pak" SelfReg="false"/>
-    <ROW File="fr.pak" Component_="am.pak" FileName="fr.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\fr.pak" SelfReg="false"/>
-    <ROW File="gu.pak" Component_="am.pak" FileName="gu.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\gu.pak" SelfReg="false"/>
-    <ROW File="he.pak" Component_="am.pak" FileName="he.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\he.pak" SelfReg="false"/>
-    <ROW File="hi.pak" Component_="am.pak" FileName="hi.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\hi.pak" SelfReg="false"/>
-    <ROW File="hr.pak" Component_="am.pak" FileName="hr.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\hr.pak" SelfReg="false"/>
-    <ROW File="hu.pak" Component_="am.pak" FileName="hu.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\hu.pak" SelfReg="false"/>
-    <ROW File="id.pak" Component_="am.pak" FileName="id.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\id.pak" SelfReg="false"/>
-    <ROW File="it.pak" Component_="am.pak" FileName="it.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\it.pak" SelfReg="false"/>
-    <ROW File="ja.pak" Component_="am.pak" FileName="ja.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ja.pak" SelfReg="false"/>
-    <ROW File="kn.pak" Component_="am.pak" FileName="kn.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\kn.pak" SelfReg="false"/>
-    <ROW File="ko.pak" Component_="am.pak" FileName="ko.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ko.pak" SelfReg="false"/>
-    <ROW File="lt.pak" Component_="am.pak" FileName="lt.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\lt.pak" SelfReg="false"/>
-    <ROW File="lv.pak" Component_="am.pak" FileName="lv.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\lv.pak" SelfReg="false"/>
-    <ROW File="ml.pak" Component_="am.pak" FileName="ml.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ml.pak" SelfReg="false"/>
-    <ROW File="mr.pak" Component_="am.pak" FileName="mr.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\mr.pak" SelfReg="false"/>
-    <ROW File="ms.pak" Component_="am.pak" FileName="ms.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ms.pak" SelfReg="false"/>
-    <ROW File="nb.pak" Component_="am.pak" FileName="nb.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\nb.pak" SelfReg="false"/>
-    <ROW File="nl.pak" Component_="am.pak" FileName="nl.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\nl.pak" SelfReg="false"/>
-    <ROW File="pl.pak" Component_="am.pak" FileName="pl.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\pl.pak" SelfReg="false"/>
-    <ROW File="ptBR.pak" Component_="am.pak" FileName="pt-BR.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\pt-BR.pak" SelfReg="false"/>
-    <ROW File="ptPT.pak" Component_="am.pak" FileName="pt-PT.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\pt-PT.pak" SelfReg="false"/>
-    <ROW File="ro.pak" Component_="am.pak" FileName="ro.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ro.pak" SelfReg="false"/>
-    <ROW File="ru.pak" Component_="am.pak" FileName="ru.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ru.pak" SelfReg="false"/>
-    <ROW File="sk.pak" Component_="am.pak" FileName="sk.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\sk.pak" SelfReg="false"/>
-    <ROW File="sl.pak" Component_="am.pak" FileName="sl.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\sl.pak" SelfReg="false"/>
-    <ROW File="sr.pak" Component_="am.pak" FileName="sr.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\sr.pak" SelfReg="false"/>
-    <ROW File="sv.pak" Component_="am.pak" FileName="sv.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\sv.pak" SelfReg="false"/>
-    <ROW File="sw.pak" Component_="am.pak" FileName="sw.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\sw.pak" SelfReg="false"/>
-    <ROW File="ta.pak" Component_="am.pak" FileName="ta.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\ta.pak" SelfReg="false"/>
-    <ROW File="te.pak" Component_="am.pak" FileName="te.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\te.pak" SelfReg="false"/>
-    <ROW File="th.pak" Component_="am.pak" FileName="th.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\th.pak" SelfReg="false"/>
-    <ROW File="tr.pak" Component_="am.pak" FileName="tr.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\tr.pak" SelfReg="false"/>
-    <ROW File="uk.pak" Component_="am.pak" FileName="uk.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\uk.pak" SelfReg="false"/>
-    <ROW File="vi.pak" Component_="am.pak" FileName="vi.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\vi.pak" SelfReg="false"/>
-    <ROW File="zhCN.pak" Component_="am.pak" FileName="zh-CN.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\zh-CN.pak" SelfReg="false"/>
-    <ROW File="zhTW.pak" Component_="am.pak" FileName="zh-TW.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\locales\zh-TW.pak" SelfReg="false"/>
-    <ROW File="icon.ico" Component_="icon.ico" FileName="icon.ico" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\icon.ico" SelfReg="false"/>
-    <ROW File="_placeholder" Component_="_placeholder" FileName="_PLACE~1|_placeholder" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\inject\_placeholder" SelfReg="false"/>
-    <ROW File="main.js" Component_="main.js" FileName="main.js" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\lib\main.js" SelfReg="false"/>
-    <ROW File="main.js.map" Component_="main.js" FileName="MAINJS~1.MAP|main.js.map" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\lib\main.js.map" SelfReg="false"/>
-    <ROW File="preload.js" Component_="main.js" FileName="preload.js" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\lib\preload.js" SelfReg="false"/>
-    <ROW File="preload.js.map" Component_="main.js" FileName="PRELOA~1.MAP|preload.js.map" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\lib\preload.js.map" SelfReg="false"/>
-    <ROW File="login.css" Component_="login.css" FileName="login.css" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\lib\static\login.css" SelfReg="false"/>
-    <ROW File="login.html" Component_="login.css" FileName="LOGIN~1.HTM|login.html" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\lib\static\login.html" SelfReg="false"/>
-    <ROW File="login.js" Component_="login.css" FileName="login.js" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\lib\static\login.js" SelfReg="false"/>
-    <ROW File="nativefier.json" Component_="icon.ico" FileName="NATIVE~1.JSO|nativefier.json" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\nativefier.json" SelfReg="false"/>
-    <ROW File="package.json" Component_="icon.ico" FileName="PACKAG~1.JSO|package.json" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\resources\app\package.json" SelfReg="false"/>
-    <ROW File="libEGL.dll_1" Component_="libEGL.dll_1" FileName="libEGL.dll" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\swiftshader\libEGL.dll" SelfReg="false"/>
-    <ROW File="libGLESv2.dll_1" Component_="libGLESv2.dll_1" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\swiftshader\libGLESv2.dll" SelfReg="false"/>
-    <ROW File="chrome_100_percent.pak" Component_="chrome_100_percent.pak" FileName="CHROME~1.PAK|chrome_100_percent.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\chrome_100_percent.pak" SelfReg="false"/>
-    <ROW File="chrome_200_percent.pak" Component_="chrome_100_percent.pak" FileName="CHROME~2.PAK|chrome_200_percent.pak" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\chrome_200_percent.pak" SelfReg="false"/>
-    <ROW File="d3dcompiler_47.dll" Component_="d3dcompiler_47.dll" FileName="D3DCOM~1.DLL|d3dcompiler_47.dll" Attributes="0" SourcePath="..\..\ProtonClient-win32-x64\d3dcompiler_47.dll" SelfReg="false"/>
     <ROW File="License.rtf" Component_="chrome_100_percent.pak" FileName="License.rtf" Attributes="0" SourcePath="..\..\License.rtf" SelfReg="false"/>
+    <ROW File="LICENSE" Component_="chrome_100_percent.pak" FileName="LICENSE" Attributes="0" SourcePath="..\..\LICENSE" SelfReg="false"/>
+    <ROW File="chrome_200_percent.pak" Component_="chrome_100_percent.pak" FileName="CHROME~1.PAK|chrome_200_percent.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\chrome_200_percent.pak" SelfReg="false"/>
+    <ROW File="d3dcompiler_47.dll" Component_="d3dcompiler_47.dll" FileName="D3DCOM~1.DLL|d3dcompiler_47.dll" Attributes="0" SourcePath="ProtonClient-win32-x64\d3dcompiler_47.dll" SelfReg="false"/>
+    <ROW File="ffmpeg.dll" Component_="ffmpeg.dll" FileName="ffmpeg.dll" Attributes="0" SourcePath="ProtonClient-win32-x64\ffmpeg.dll" SelfReg="false"/>
+    <ROW File="icudtl.dat" Component_="chrome_100_percent.pak" FileName="icudtl.dat" Attributes="0" SourcePath="ProtonClient-win32-x64\icudtl.dat" SelfReg="false"/>
+    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="ProtonClient-win32-x64\libEGL.dll" SelfReg="false"/>
+    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="ProtonClient-win32-x64\libGLESv2.dll" SelfReg="false"/>
+    <ROW File="LICENSES.chromium.html" Component_="chrome_100_percent.pak" FileName="LICENS~1.HTM|LICENSES.chromium.html" Attributes="0" SourcePath="ProtonClient-win32-x64\LICENSES.chromium.html" SelfReg="false"/>
+    <ROW File="ProtonClient.exe" Component_="ProtonClient.exe" FileName="PROTON~1.EXE|ProtonClient.exe" Attributes="0" SourcePath="ProtonClient-win32-x64\ProtonClient.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="resources.pak" Component_="chrome_100_percent.pak" FileName="RESOUR~1.PAK|resources.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\resources.pak" SelfReg="false"/>
+    <ROW File="snapshot_blob.bin" Component_="chrome_100_percent.pak" FileName="SNAPSH~1.BIN|snapshot_blob.bin" Attributes="0" SourcePath="ProtonClient-win32-x64\snapshot_blob.bin" SelfReg="false"/>
+    <ROW File="v8_context_snapshot.bin" Component_="chrome_100_percent.pak" FileName="V8_CON~1.BIN|v8_context_snapshot.bin" Attributes="0" SourcePath="ProtonClient-win32-x64\v8_context_snapshot.bin" SelfReg="false"/>
+    <ROW File="version" Component_="chrome_100_percent.pak" FileName="version" Attributes="0" SourcePath="ProtonClient-win32-x64\version" SelfReg="false"/>
+    <ROW File="vk_swiftshader.dll" Component_="vk_swiftshader.dll" FileName="VK_SWI~1.DLL|vk_swiftshader.dll" Attributes="0" SourcePath="ProtonClient-win32-x64\vk_swiftshader.dll" SelfReg="false"/>
+    <ROW File="vk_swiftshader_icd.json" Component_="chrome_100_percent.pak" FileName="VK_SWI~1.JSO|vk_swiftshader_icd.json" Attributes="0" SourcePath="ProtonClient-win32-x64\vk_swiftshader_icd.json" SelfReg="false"/>
+    <ROW File="vulkan1.dll" Component_="vulkan1.dll" FileName="vulkan-1.dll" Attributes="0" SourcePath="ProtonClient-win32-x64\vulkan-1.dll" SelfReg="false"/>
+    <ROW File="am.pak" Component_="am.pak" FileName="am.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\am.pak" SelfReg="false"/>
+    <ROW File="ar.pak" Component_="am.pak" FileName="ar.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ar.pak" SelfReg="false"/>
+    <ROW File="bg.pak" Component_="am.pak" FileName="bg.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\bg.pak" SelfReg="false"/>
+    <ROW File="bn.pak" Component_="am.pak" FileName="bn.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\bn.pak" SelfReg="false"/>
+    <ROW File="ca.pak" Component_="am.pak" FileName="ca.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ca.pak" SelfReg="false"/>
+    <ROW File="cs.pak" Component_="am.pak" FileName="cs.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\cs.pak" SelfReg="false"/>
+    <ROW File="da.pak" Component_="am.pak" FileName="da.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\da.pak" SelfReg="false"/>
+    <ROW File="de.pak" Component_="am.pak" FileName="de.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\de.pak" SelfReg="false"/>
+    <ROW File="el.pak" Component_="am.pak" FileName="el.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\el.pak" SelfReg="false"/>
+    <ROW File="enGB.pak" Component_="am.pak" FileName="en-GB.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\en-GB.pak" SelfReg="false"/>
+    <ROW File="enUS.pak" Component_="am.pak" FileName="en-US.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\en-US.pak" SelfReg="false"/>
+    <ROW File="es419.pak" Component_="am.pak" FileName="es-419.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\es-419.pak" SelfReg="false"/>
+    <ROW File="es.pak" Component_="am.pak" FileName="es.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\es.pak" SelfReg="false"/>
+    <ROW File="et.pak" Component_="am.pak" FileName="et.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\et.pak" SelfReg="false"/>
+    <ROW File="fa.pak" Component_="am.pak" FileName="fa.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\fa.pak" SelfReg="false"/>
+    <ROW File="fi.pak" Component_="am.pak" FileName="fi.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\fi.pak" SelfReg="false"/>
+    <ROW File="fil.pak" Component_="am.pak" FileName="fil.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\fil.pak" SelfReg="false"/>
+    <ROW File="fr.pak" Component_="am.pak" FileName="fr.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\fr.pak" SelfReg="false"/>
+    <ROW File="gu.pak" Component_="am.pak" FileName="gu.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\gu.pak" SelfReg="false"/>
+    <ROW File="he.pak" Component_="am.pak" FileName="he.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\he.pak" SelfReg="false"/>
+    <ROW File="hi.pak" Component_="am.pak" FileName="hi.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\hi.pak" SelfReg="false"/>
+    <ROW File="hr.pak" Component_="am.pak" FileName="hr.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\hr.pak" SelfReg="false"/>
+    <ROW File="hu.pak" Component_="am.pak" FileName="hu.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\hu.pak" SelfReg="false"/>
+    <ROW File="id.pak" Component_="am.pak" FileName="id.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\id.pak" SelfReg="false"/>
+    <ROW File="it.pak" Component_="am.pak" FileName="it.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\it.pak" SelfReg="false"/>
+    <ROW File="ja.pak" Component_="am.pak" FileName="ja.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ja.pak" SelfReg="false"/>
+    <ROW File="kn.pak" Component_="am.pak" FileName="kn.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\kn.pak" SelfReg="false"/>
+    <ROW File="ko.pak" Component_="am.pak" FileName="ko.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ko.pak" SelfReg="false"/>
+    <ROW File="lt.pak" Component_="am.pak" FileName="lt.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\lt.pak" SelfReg="false"/>
+    <ROW File="lv.pak" Component_="am.pak" FileName="lv.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\lv.pak" SelfReg="false"/>
+    <ROW File="ml.pak" Component_="am.pak" FileName="ml.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ml.pak" SelfReg="false"/>
+    <ROW File="mr.pak" Component_="am.pak" FileName="mr.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\mr.pak" SelfReg="false"/>
+    <ROW File="ms.pak" Component_="am.pak" FileName="ms.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ms.pak" SelfReg="false"/>
+    <ROW File="nb.pak" Component_="am.pak" FileName="nb.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\nb.pak" SelfReg="false"/>
+    <ROW File="nl.pak" Component_="am.pak" FileName="nl.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\nl.pak" SelfReg="false"/>
+    <ROW File="pl.pak" Component_="am.pak" FileName="pl.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\pl.pak" SelfReg="false"/>
+    <ROW File="ptBR.pak" Component_="am.pak" FileName="pt-BR.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\pt-BR.pak" SelfReg="false"/>
+    <ROW File="ptPT.pak" Component_="am.pak" FileName="pt-PT.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\pt-PT.pak" SelfReg="false"/>
+    <ROW File="ro.pak" Component_="am.pak" FileName="ro.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ro.pak" SelfReg="false"/>
+    <ROW File="ru.pak" Component_="am.pak" FileName="ru.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ru.pak" SelfReg="false"/>
+    <ROW File="sk.pak" Component_="am.pak" FileName="sk.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\sk.pak" SelfReg="false"/>
+    <ROW File="sl.pak" Component_="am.pak" FileName="sl.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\sl.pak" SelfReg="false"/>
+    <ROW File="sr.pak" Component_="am.pak" FileName="sr.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\sr.pak" SelfReg="false"/>
+    <ROW File="sv.pak" Component_="am.pak" FileName="sv.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\sv.pak" SelfReg="false"/>
+    <ROW File="sw.pak" Component_="am.pak" FileName="sw.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\sw.pak" SelfReg="false"/>
+    <ROW File="ta.pak" Component_="am.pak" FileName="ta.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\ta.pak" SelfReg="false"/>
+    <ROW File="te.pak" Component_="am.pak" FileName="te.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\te.pak" SelfReg="false"/>
+    <ROW File="th.pak" Component_="am.pak" FileName="th.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\th.pak" SelfReg="false"/>
+    <ROW File="tr.pak" Component_="am.pak" FileName="tr.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\tr.pak" SelfReg="false"/>
+    <ROW File="uk.pak" Component_="am.pak" FileName="uk.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\uk.pak" SelfReg="false"/>
+    <ROW File="vi.pak" Component_="am.pak" FileName="vi.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\vi.pak" SelfReg="false"/>
+    <ROW File="zhCN.pak" Component_="am.pak" FileName="zh-CN.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\zh-CN.pak" SelfReg="false"/>
+    <ROW File="zhTW.pak" Component_="am.pak" FileName="zh-TW.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\locales\zh-TW.pak" SelfReg="false"/>
+    <ROW File="icon.ico" Component_="icon.ico" FileName="icon.ico" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\icon.ico" SelfReg="false"/>
+    <ROW File="_placeholder" Component_="_placeholder" FileName="_PLACE~1|_placeholder" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\inject\_placeholder" SelfReg="false"/>
+    <ROW File="main.js" Component_="main.js" FileName="main.js" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\lib\main.js" SelfReg="false"/>
+    <ROW File="main.js.map" Component_="main.js" FileName="MAINJS~1.MAP|main.js.map" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\lib\main.js.map" SelfReg="false"/>
+    <ROW File="preload.js" Component_="main.js" FileName="preload.js" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\lib\preload.js" SelfReg="false"/>
+    <ROW File="preload.js.map" Component_="main.js" FileName="PRELOA~1.MAP|preload.js.map" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\lib\preload.js.map" SelfReg="false"/>
+    <ROW File="login.css" Component_="login.css" FileName="login.css" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\lib\static\login.css" SelfReg="false"/>
+    <ROW File="login.html" Component_="login.css" FileName="LOGIN~1.HTM|login.html" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\lib\static\login.html" SelfReg="false"/>
+    <ROW File="login.js" Component_="login.css" FileName="login.js" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\lib\static\login.js" SelfReg="false"/>
+    <ROW File="nativefier.json" Component_="icon.ico" FileName="NATIVE~1.JSO|nativefier.json" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\nativefier.json" SelfReg="false"/>
+    <ROW File="package.json" Component_="icon.ico" FileName="PACKAG~1.JSO|package.json" Attributes="0" SourcePath="ProtonClient-win32-x64\resources\app\package.json" SelfReg="false"/>
+    <ROW File="libEGL.dll_1" Component_="libEGL.dll_1" FileName="libEGL.dll" Attributes="0" SourcePath="ProtonClient-win32-x64\swiftshader\libEGL.dll" SelfReg="false"/>
+    <ROW File="libGLESv2.dll_1" Component_="libGLESv2.dll_1" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="ProtonClient-win32-x64\swiftshader\libGLESv2.dll" SelfReg="false"/>
+    <ROW File="chrome_100_percent.pak" Component_="chrome_100_percent.pak" FileName="CHROME~2.PAK|chrome_100_percent.pak" Attributes="0" SourcePath="ProtonClient-win32-x64\chrome_100_percent.pak" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -217,6 +220,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="ProtonClient_Dir" Component_="ProtonClient" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
@@ -229,6 +233,7 @@
     <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_SetArpReadmeFile" Type="51" Source="ARPREADME" Target="[#README.md]"/>
     <ROW Action="AI_ViewReadme" Type="1" Source="aicustact.dll" Target="[#README.md]"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFiles64Folder]\[ProductName]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
@@ -238,6 +243,7 @@
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
     <ROW Feature_="MainFeature" Component_="chrome_100_percent.pak"/>
+    <ROW Feature_="MainFeature" Component_="d3dcompiler_47.dll"/>
     <ROW Feature_="MainFeature" Component_="ffmpeg.dll"/>
     <ROW Feature_="MainFeature" Component_="libEGL.dll"/>
     <ROW Feature_="MainFeature" Component_="libGLESv2.dll"/>
@@ -251,10 +257,19 @@
     <ROW Feature_="MainFeature" Component_="login.css"/>
     <ROW Feature_="MainFeature" Component_="libEGL.dll_1"/>
     <ROW Feature_="MainFeature" Component_="libGLESv2.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="d3dcompiler_47.dll"/>
+    <ROW Feature_="MainFeature" Component_="ProtonClient"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
     <ROW Name="icon.exe" SourcePath="..\..\icons\icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
+    <ROW IniFile="IconFile" FileName="GETPRO~1.URL|Get ProtonMail.url" DirProperty="ProtonClient_Dir" Section="InternetShortcut" Key="IconFile" Value="[#ProtonClient.exe]" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="IconIndex" FileName="GETPRO~1.URL|Get ProtonMail.url" DirProperty="ProtonClient_Dir" Section="InternetShortcut" Key="IconIndex" Value="0" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="URL" FileName="GETPRO~1.URL|Get ProtonMail.url" DirProperty="ProtonClient_Dir" Section="InternetShortcut" Key="URL" Value="https://go.getproton.me/SHJN" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="URL_1" FileName="GITHUB~1.URL|Github repo.url" DirProperty="ProtonClient_Dir" Section="InternetShortcut" Key="URL" Value="https://github.com/Steccas/ProtonClient?sponsor=1" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="WorkingDirectory" FileName="GETPRO~1.URL|Get ProtonMail.url" DirProperty="ProtonClient_Dir" Section="InternetShortcut" Key="WorkingDirectory" Value="[ProtonClient_Dir]" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="WorkingDirectory_1" FileName="GITHUB~1.URL|Github repo.url" DirProperty="ProtonClient_Dir" Section="InternetShortcut" Key="WorkingDirectory" Value="[ProtonClient_Dir]" Action="0" Component_="APPDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
@@ -264,6 +279,7 @@
     <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
     <ROW Action="AI_DetectSoftware" Sequence="101"/>
+    <ROW Action="AI_SetArpReadmeFile" Condition="NOT Installed" Sequence="1001"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -285,8 +301,10 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="ProtonClient" Directory_="ProgramMenuFolder" Name="PROTON~1|Proton Client" Component_="ProtonClient.exe" Target="[#ProtonClient.exe]" Description="Unofficial ProtonMail client" Hotkey="0" Icon_="icon.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
-    <ROW Shortcut="ProtonClient_1" Directory_="DesktopFolder" Name="PROTON~1|Proton Client" Component_="ProtonClient.exe" Target="[#ProtonClient.exe]" Description="Unofficial Proton Maill client" Hotkey="0" Icon_="icon.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="ProtonClient" Directory_="ProtonClient_Dir" Name="PROTON~1|ProtonClient" Component_="ProtonClient.exe" Target="[#ProtonClient.exe]" Description="Unofficial ProtonMail client from Luca Steccanella" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="ProtonClient_1" Directory_="DesktopFolder" Name="PROTON~1|ProtonClient" Component_="ProtonClient.exe" Target="[#ProtonClient.exe]" Description="Unofficial ProtonMail client from Luca Steccanella" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="ProtonClient_2" Directory_="StartupFolder" Name="PROTON~1|ProtonClient" Component_="ProtonClient.exe" Target="[#ProtonClient.exe]" Description="Unofficial ProtonMail client from Luca Steccanella" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="UninstallProductNameProductVersion" Directory_="ProtonClient_Dir" Name="UNINST~1.1|Uninstall [|ProductName] [|ProductVersion]" Component_="libGLESv2.dll_1" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
