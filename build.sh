@@ -3,7 +3,7 @@
 if [ -z "$1" ]
   then
     echo "Please specify destination platform"
-    echo "You can choose --win, --linux, --mac or --all"
+    echo "You can choose --win, --linux, --mac, --unix (linux & mac) or --all"
     echo "i.e.: ./build.sh linux"
     exit 1
 fi
@@ -20,6 +20,11 @@ function buildLinux {
 
 function buildMac {
     node ./proton_client_mac.js
+}
+
+function buildUnix {
+    buildLinux
+    buildMac
 }
 
 function buildAll {
