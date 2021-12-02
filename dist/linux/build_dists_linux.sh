@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$version = jq .version package.json
+version=($(jq .version ../../package.json | sed 's/"//g'))
 
 echo "Creating packages for version $version"
 

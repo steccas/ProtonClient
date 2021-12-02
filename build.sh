@@ -19,8 +19,8 @@ function buildLinux {
     while true; do
         read -p "Do you wish to create Linux dist packages?" yn
         case $yn in
-            [Yy]* ) distLinux;;
-            [Nn]* ) exit 2;;
+            [Yy]* ) distLinux | exit 2;;
+            [Nn]* ) exit 0;;
             * ) echo "Please answer yes or no.";;
         esac
     done
@@ -42,7 +42,8 @@ function buildAll {
 }
 
 function distLinux {
-    ./dist/linux/build_dists_linux.sh
+    cd ./dist/linux/
+    ./build_dists_linux.sh
 }
 
 if [ $platform == --win ]
