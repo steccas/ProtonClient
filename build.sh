@@ -42,7 +42,7 @@ function buildAll {
 }
 
 function distLinux {
-
+    ./dist/linux/build_dists_linux.sh
 }
 
 if [ $platform == --win ]
