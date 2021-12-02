@@ -15,6 +15,8 @@ It is a very newborn and basic project, but it can grow and get way better, if y
 You can also start contributing now! If you wish to do so please feel free to fork the project and propose modifications that we can merge.
 The more we are the better!
 
+You can also consider a donation and remember to check my links.
+
 A coffee is always a gesture of LOVE ❤️
 
 <a href="https://www.buymeacoffee.com/steccas" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
