@@ -16,6 +16,14 @@ function buildWin {
 
 function buildLinux {
     node ./proton_client_linux.js
+    while true; do
+        read -p "Do you wish to create Linux dist packages?" yn
+        case $yn in
+            [Yy]* ) distLinux;;
+            [Nn]* ) exit 2;;
+            * ) echo "Please answer yes or no.";;
+        esac
+    done
 }
 
 function buildMac {
@@ -31,6 +39,10 @@ function buildAll {
     buildWin
     buildLinux
     buildMac
+}
+
+function distLinux {
+
 }
 
 if [ $platform == --win ]
