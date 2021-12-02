@@ -48,6 +48,11 @@ elif [ $platform == --mac ]
         echo "Building for Mac"
         buildMac
 
+elif [ $platform == --mac ]
+    then
+        echo "Building for Linux & Mac"
+        buildUnix
+
 elif [ $platform == --all ]
 then
     echo "Building for all platforms"
