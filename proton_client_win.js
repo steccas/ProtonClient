@@ -6,7 +6,7 @@ var options = { //nativefier -n ProtonMail -a x64 --tray --single-instance --int
   targetUrl: 'https://mail.protonmail.com', // required
   platform: 'windows', // defaults to the current system
   arch: 'x64', // defaults to the current system
-  appVersion: '1.2.2',
+  appVersion: '1.2.3',
   overwrite: true,
   asar: false, // see conceal
   icon: './icons/icon.ico',

@@ -17,7 +17,7 @@
     <ROW Property="ProductCode" Value="1033:{B651FD47-4EBF-4168-9AEC-61327E06470D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="ProtonClient"/>
-    <ROW Property="ProductVersion" Value="1.2.2" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.2.3" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{C6DE4E0C-ED81-43AE-98FE-3A45B295DCAA}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
