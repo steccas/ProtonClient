@@ -11,7 +11,7 @@ Go [here](https://go.getproton.me/SHJN) for further information about ProtonMail
 ![GitHub repo size](https://img.shields.io/github/repo-size/Steccas/ProtonClient?style=plastic) ![GitHub language count](https://img.shields.io/github/languages/count/Steccas/ProtonClient?style=plastic) ![GitHub top language](https://img.shields.io/github/languages/top/Steccas/ProtonClient?style=plastic) ![GitHub last commit](https://img.shields.io/github/last-commit/Steccas/ProtonClient?color=red&style=plastic)
 
 ## Community and support
-It is a very newborn and basic project, but it can grow and get way better, if you want to help please leave a star 🌟 and share it with your friends.
+It is a very new project, but it can grow and get way better, if you want to help please leave a star 🌟 and share it with your friends.
 You can also start contributing now! If you wish to do so please feel free to fork the project and propose modifications that we can merge.
 The more we are the better!
 
