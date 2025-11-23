@@ -12,6 +12,7 @@ platform=$1
 
 function buildWin {
     node ./proton_client_win.js
+    exit $?
 }
 
 function buildLinux {
@@ -19,7 +20,7 @@ function buildLinux {
     while true; do
         read -p "Do you wish to create Linux dist packages?" yn
         case $yn in
-            [Yy]* ) distLinux | exit 2;;
+            [Yy]* ) distLinux; exit $?;;
             [Nn]* ) exit 0;;
             * ) echo "Please answer yes or no.";;
         esac
@@ -28,22 +29,25 @@ function buildLinux {
 
 function buildMac {
     node ./proton_client_mac.js
+    exit $?
 }
 
 function buildUnix {
-    buildLinux
-    buildMac
+    node ./proton_client_linux.js || exit $?
+    node ./proton_client_mac.js || exit $?
+    exit 0
 }
 
 function buildAll {
-    buildWin
-    buildLinux
-    buildMac
+    node ./proton_client_win.js || exit $?
+    node ./proton_client_linux.js || exit $?
+    node ./proton_client_mac.js || exit $?
+    exit 0
 }
 
 function distLinux {
-    cd ./dist/linux/
-    ./build_dists_linux.sh
+    (cd ./dist/linux/ && ./build_dists_linux.sh)
+    return $?
 }
 
 if [ $platform == --win ]

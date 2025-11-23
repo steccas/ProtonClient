@@ -1,15 +1,19 @@
 #!/bin/bash
 
-version=($(jq .version ../../package.json | sed 's/"//g'))
+version=$(jq -r .version ../../package.json)
 
-echo "Creating packages for version $version"
+echo "Creating Debian package for version $version"
 
+# Build .deb package
 chmod -R 755 ./proton-client
 dpkg-deb --build proton-client
 mv proton-client.deb proton-client-$version-amd64.deb
-sudo debtap -u
-debtap ./proton-client-$version-amd64.deb
-sudo alien -r ./proton-client-$version-amd64.deb --scripts
-zip -rv proton-client-$version-1-x86_64.arch.zip .INSTALL .MTREE .PKGINFO proton-client-$version-1-x86_64.pkg.tar.zst
+
+echo "Successfully created: proton-client-$version-amd64.deb"
+echo ""
+echo "Note: For other distro formats (RPM, Arch), use native packaging tools:"
+echo "  - RPM: Use rpmbuild with a .spec file"
+echo "  - Arch: Use makepkg with a PKGBUILD"
+echo "  - AppImage: Use appimagetool"
 
 exit 0
